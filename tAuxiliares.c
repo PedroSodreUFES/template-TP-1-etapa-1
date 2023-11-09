@@ -321,7 +321,7 @@ void RealizaJogo(tPacman *pacman, tMapa *mapa, tFantasma *fantasmas, int nfantas
     int nfrutas = mapa->nFrutasAtual;
     tPosicao *posicaocheck=ClonaPosicao(ObtemPosicaoPacman(pacman));
     COMANDO comando;
-    while(nfrutas!=ObtemPontuacaoAtualPacman(pacman) && EstaVivoPacman(pacman) && ObtemNumeroAtualMovimentosPacman(pacman)<=ObtemNumeroMaximoMovimentosMapa(mapa))
+    while(nfrutas!=ObtemPontuacaoAtualPacman(pacman) && EstaVivoPacman(pacman) && ObtemNumeroAtualMovimentosPacman(pacman)<ObtemNumeroMaximoMovimentosMapa(mapa))
     {
         posicaocheck->linha=ObtemLinhaPosicao(ObtemPosicaoPacman(pacman));
         posicaocheck->coluna=ObtemColunaPosicao(ObtemPosicaoPacman(pacman));
